@@ -26,3 +26,6 @@ Route::get('/dashboard/about', 'Dashboard\AboutController@index')->name('about')
 Route::get('/dashboard/reports', 'Dashboard\ReportController@index')->name('reports');
 
 Route::get('/dashboard/settings', 'Dashboard\SettingController@index')->name('settings');
+
+Route::post('/dashboard/settings', 'Dashboard\SettingController@store');
+

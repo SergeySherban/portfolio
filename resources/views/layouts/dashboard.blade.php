@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,13 +34,13 @@
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="{{ route('dashboard') }}">
+                <a class="nav-link active" href="dashboard">
                   <span data-feather="home"></span>
                   Dashboard <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url('/dashboard/portfolio') }}">
+                <a class="nav-link" href="{{ route('portfolio') }}">
                   <span data-feather="file"></span>
                   Portfolio
                 </a>

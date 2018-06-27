@@ -8,4 +8,7 @@ class Setting extends Model
 {
     protected $table = 'settings';
 	public $timestamps = false;
+	
+	protected $guarded = [''];
+	protected $fillabel = ['email', 'tel'];
 }

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class SettingsTableSeeder extends Seeder
 {
@@ -13,6 +12,7 @@ class SettingsTableSeeder extends Seeder
     public function run()
     {
         DB::table('settings')->insert([
+			'id' => 1,
 			'email' => 'sv.sherban@gmail.com',
 			'tel' => '0632308388'
 		]);
