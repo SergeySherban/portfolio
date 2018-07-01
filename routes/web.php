@@ -19,6 +19,8 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('/dashboard/portfolio', 'Dashboard\PortfolioController@index')->name('portfolio');
 
+Route::get('/dashboard/portfolio/create', 'Dashboard\PortfolioController@create');
+
 Route::get('/dashboard/services', 'Dashboard\ServiceController@index')->name('services');
 
 Route::get('/dashboard/about', 'Dashboard\AboutController@index')->name('about');
