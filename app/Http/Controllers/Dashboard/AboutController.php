@@ -35,6 +35,10 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
+      $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required',
+        ]);
       $data = $request->all();
       $about = About::find(1)->update($data);
       
@@ -62,7 +66,7 @@ class AboutController extends Controller
      */
     public function edit(Request $about)
     {
-        return view('dashboard.about.edit', ['about' => $about]);
+        //
     }
 
     /**

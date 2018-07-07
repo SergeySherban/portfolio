@@ -10,8 +10,8 @@
         <br>
         <br>
     </div>
-   <!-- @foreach($about as $a)-->
+    <div>
         <h2 class="h2">{{ $about->title }}</h2>
         <blockquote>{{ $about->description }}</blockquote>
-   <!-- @endforeach-->
+    </div>
 @endsection

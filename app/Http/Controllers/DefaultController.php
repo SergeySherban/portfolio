@@ -11,9 +11,9 @@ class DefaultController extends Controller
 {
     public function index()
     {
-        $setting=Setting::find(1);
-        $about=About::find(1);
-        $portfolio=Portfolio::all();
+        $setting = Setting::find(1);
+        $about = About::find(1);
+        $portfolio = Portfolio::all();
         return view('default.index',[
             'setting'=>$setting,
             'about'=>$about,

@@ -81,7 +81,7 @@ class PortfolioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $portfolio)
+    public function edit(Portfolio $portfolio)
     {
 		
         return view('dashboard.portfolio.edit', [
@@ -98,6 +98,13 @@ class PortfolioController extends Controller
      */
     public function update(Request $request, Portfolio $portfolio)
     {
+        $request->validate([
+            'title' => 'required|max:255',
+            'url' => 'required|max:255',
+            'category' => 'required|max:255',
+            'description' => 'required',
+        ]);
+        
         $data = $request->all();
         $path = public_path('uploads/portfolio/');
         $fullpath = $path . $portfolio->preview;

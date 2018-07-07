@@ -10,10 +10,20 @@
 		  <div class="form-group">
 			<label for="title">Title</label>
 			<input type="text" class="form-control" id="title" placeholder="Title" name="title">
+			@if($errors->has('title'))
+			    <span class="help-block">
+			        <strong>{{ $errors->first('title') }}</strong>
+			    </span>
+            @endif
 		  </div>
 		  <div class="form-group">
 			<label for="description">Description</label>
 			<textarea class="form-control" id="description" name="description" rows="10"></textarea>
+			@if($errors->has('description'))
+			    <span class="help-block">
+			        <strong>{{ $errors->first('description') }}</strong>
+			    </span>
+			@endif
 		  </div>
 		  {{ csrf_field() }}
 		  <button type="submit" class="btn btn-primary">Save</button>
